@@ -1,0 +1,13 @@
+#Mac stuff
+.DS_Store
+
+#Windows stuff
+Thumbs.db
+Desktop.ini
+
+#Web stuff
+.htaccess
+
+#App stuff
+.settings
+.project

@@ -1,0 +1,11 @@
+/*
+ * Theme Name: Inception
+ * Theme URI: http://stourvalleydesigns.com
+ * Description: Basic framework for WordPress development
+ * Version: 0.1
+ * Author: Adam Chamberlin
+ * Author URI: http://stourvalleydesigns.com
+ */
+
+@import('css/reset.css');
+@import('css/master.csss');

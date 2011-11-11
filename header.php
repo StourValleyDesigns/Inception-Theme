@@ -36,7 +36,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<!--[if lt IE 9]> <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 		
-		<?php if(is_singular()) wp_enqueue_script('comment_reply'); ?>
+		<?php if(is_singular()) wp_enqueue_script('comment_reply'); //Include JavaScript for threaded comments ?>
 		
 		<?php wp_head(); //Include the WordPress header hook ?>
 		
@@ -48,10 +48,24 @@
 			
 			<header id="header">
 				<div class="inner">
-					<h1>
-						<a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
-							<?php bloginfo('name'); ?>
-						</a>
-					</h1>	
+					<div id="blog-title">
+						<span>
+							<a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>" rel="home">
+								<?php bloginfo('name'); ?>
+							</a>
+						</span>
+					</div><!-- #blog-title -->
+					<?php if(is_home() || is_front_page()) { ?>
+						<h1 id="blog-description">
+							<?php bloginfo('description'); ?>
+						</h1>
+					<?php } else { ?>
+						<div id="blog-description">
+							<?php bloginfo('description'); ?>
+						</div>
+					<?php } ?>
+					<div class="skip-link">
+						<a href="#content" title="<?php _e('Skip to content', 'inception'); ?>"><?php _e('Skip to content', 'inception'); ?></a>
+					</div>
 				</div><!-- .inner -->
 			</header><!-- #header -->

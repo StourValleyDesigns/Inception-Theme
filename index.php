@@ -27,8 +27,8 @@
 				</div>
 			<?php } ?>
 			
-			<?php //Start the loop ?>
-			<?php while(have_posts()) : the_post() ?>
+			<?php //While we have posts
+			while(have_posts()) : the_post() ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<h2 class="entry-title">
 						<a href="<?php the_permalink(); ?>" title="<?php printf(__('Permalink to %s', 'inception'), the_title_attribute('echo=0')); ?>" rel="bookmark">
@@ -74,7 +74,8 @@
                         <?php edit_post_link( __('Edit', 'inception'), "<span class=\"meta-sep\"> | </span><span class=\"edit-link\">", "</span>"); ?>
                     </div><!-- #entry-utility -->
 				</article><!-- #post-<?php the_ID(); ?> -->
-			<?php endwhile; ?>
+			<?php //End while
+			endwhile; ?>
 			
 			<?php //Navigation ?>
 			<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if($total_pages > 1) { ?>

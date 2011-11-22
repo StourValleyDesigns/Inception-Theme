@@ -6,14 +6,19 @@
  * @subpackage Inception
  */
 
+ /*
+  * Define the default temppath and images path
+  */
+define('TEMP_PATH', get_bloginfo('stylesheet_directory'));
+define('IMAGES', TEMP_PATH . "/img");
+ 
 /*
  * Make the theme available for translation
  * Translations can be filled in the /languages/ directory
  */
-load_theme_textdomain('inception', TEMPLATEPATH . '/languages');
-
+load_theme_textdomain('inception', TEMP_PATH . '/languages');
 $locale = get_locale();
-$locale_file = TEMPLATEPATH . "/languages/$locale.php";
+$locale_file = TEMP_PATH . "/languages/$locale.php";
 if(is_readable($locale_file)) {
 	require_once($locale_file);
 }
@@ -77,8 +82,7 @@ function custom_comments($comment, $args, $depth) {
 			)));
 		endif; ?>
 	</li>
-	<?php
-}
+<?php }
 
 /*
  * Custom callback to list pings
@@ -99,8 +103,7 @@ function custom_pings($comment, $args, $depth) {
 			<?php comment_text(); ?>
 		</div><!-- .comment-content -->
 	</li>
-	<?php
-}
+<?php }
 
 /*
  * Produces an avatar

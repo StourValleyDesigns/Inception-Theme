@@ -24,6 +24,12 @@ if(is_readable($locale_file)) {
 }
 
 /*
+ * Add theme support and functions
+ */
+add_theme_support('nav_menus');
+add_action('init', 'theme_widgets_init');
+
+/*
  * Get the page number
  */
 function get_page_number() {
@@ -31,12 +37,6 @@ function get_page_number() {
 		print ' | ' . __('Page ', 'inception') . get_query_var('paged');
 	}
 }
-
-/*
- * Add theme support and functions
- */
-add_theme_support('nav_menus');
-
 
 /*
  * Register Navigation Menus
@@ -118,4 +118,87 @@ function commenter_link() {
 	$avatar_email = get_comment_author_email();
 	$avatar = str_replace("class='avatar'", "class='photo avatar", get_avatar($avatar_email, 80));
 	echo $avatar . '<span class="fn n"' . $commenter . '</span>';
+}
+
+/*
+ * For category lists on category archives:
+ */
+function cats_meow($glue) {
+	$current_cat = single_cat_title('', false);
+	$separator = "\n";
+	$cats = explode($separator, get_the_category_list($separator));
+	foreach($cats as $i => $str) {
+		if(strstr($str, ">$current_cat<")) {
+			unset($cats[$i]);
+			break;
+		}
+	}
+	if(empty($cats)) {
+		return false;
+	}
+	return trim(join($glue, $cats));
+}
+
+/*
+ * For tag lists on tag archives
+ */
+function tag_ur_it($glue) {
+	$current_tag = single_tag_title('', '', false);
+	$separator = "\n";
+	$tags = explode($separator, get_the_tag_list("", "$separator", ""));
+	foreach($tags as $i => $str) {
+		if(strstr($str, ">$current_tag<")) {
+			unset($tags[$i]);
+			break;
+		}
+	}
+	if(empty($tags)) {
+		return false;
+	}
+	return trim(join($glue, $tags));
+}
+
+/*
+ * Register widgetised areas
+ */
+function theme_widgets_init() {
+	register_sidebar(array(
+		'name' => 'Primary Widget Area',
+		'id' => 'primary_widget_area',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
+	));
+	register_sidebar(array(
+		'name' => 'Secondary Widget Area',
+		'id' => 'secondary_widget_area',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
+	));
+}
+
+/*
+ * Preset the widget areas to contain some stuff
+ */
+$preset_widgets = array(
+	'primary_widget_area' => array('search', 'pages', 'categories', 'archives'),
+	'secondary_widget_area' => array('links', 'meta')
+);
+if(isset($_GET['activated'])) {
+	update_option('sidevars_widgets', $preset_widgets);
+}
+
+/*
+ * Check for static widgets in widget-ready areas
+ */
+function is_sidebar_active() {
+	global $wp_registered_sidebars;
+	$widgetcolumns = wp_get_sidebars_widgets();
+	if($widgetcolumns[$index]) {
+		return true;
+	}
+	return false;
 }

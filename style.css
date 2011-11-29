@@ -6,6 +6,469 @@
  * Author: Adam Chamberlin
  * Author URI: http://stourvalleydesigns.com
  */
-
-@import('css/reset.css');
-@import('css/master.csss');
+/*! normalize.css 2011-11-04T15:38 UTC - http://github.com/necolas/normalize.css */
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden], .hide {
+  display: none;
+}
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: none;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+.clickable,
+label,
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+b, strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+blockquote {
+  margin: 1em 40px;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+ul, ol {
+  margin-left: 0;
+  padding: 0 0 0 40px;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+img, object, embed {
+  max-width: 100%;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  *margin-left: -7px;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button, input {
+  line-height: normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+input[type="radio"] {
+  vertical-align: text-bottom;
+  box-sizing: border-box;
+}
+input[type="checkbox"] {
+  vertical-align: bottom;
+  *vertical-align: baseline;
+  box-sizing: border-box;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: inherit;
+  font: 100%;
+}
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+td, td img {
+  font-weight: normal;
+  vertical-align: top;
+}
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+body,
+select,
+input,
+textarea {
+  color: #333;
+}
+a {
+  color: #03f;
+}
+a:hover {
+  color: #69f;
+}
+::-moz-selection {
+  background: #fcd700;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: #fcd700;
+  color: #fff;
+  text-shadow: none;
+}
+a:link {
+  -webkit-tap-highlight-color: #fcd700;
+}
+ins {
+  background-color: #fcd700;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #fcd700;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+/* typography.css */
+body {
+  font-size: 12px;
+  line-height: 18px;
+  color: #222;
+  background: #fff;
+  font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  color: #111;
+}
+h1, h2 {
+  line-height: 36px;
+  margin-bottom: 18px;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 18px;
+}
+h3,
+h4,
+h5,
+h6 {
+  line-height: 18px;
+}
+h1 {
+  font-size: 36px;
+  top: 5px;
+}
+h2 {
+  font-size: 27.599999999999998px;
+  top: 8px;
+}
+h3 {
+  font-size: 24px;
+  top: 1px;
+}
+h4 {
+  font-size: 18px;
+  top: 2px;
+}
+h5 {
+  font-size: 15px;
+  top: 4px;
+}
+h6 {
+  font-size: 12px;
+  top: 5px;
+}
+p {
+  margin-bottom: 18px;
+}
+a:focus, a:hover {
+  color: #09f;
+}
+a {
+  color: #06c;
+  text-decoration: underline;
+}
+blockquote {
+  margin: 18px;
+  color: #666;
+  font-style: italic;
+}
+strong, dfn {
+  font-weight: bold;
+}
+address {
+  margin: 0 0 18px 0;
+  font-style: italic;
+}
+del {
+  color: #666;
+}
+pre {
+  margin: 18px 0;
+}
+li ul, li ol {
+  margin: 0;
+}
+ul, ol {
+  margin-bottom: 18px;
+  padding-left: 12px;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+dl {
+  margin: 0 0 18px 0;
+}
+dl dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 1.5em;
+}
+table {
+  margin-bottom: 1.4em;
+  width: 100%;
+}
+th {
+  font-weight: bold;
+}
+thead th {
+  background: #c3d9ff;
+}
+th, td, caption {
+  padding: 4px 10px 4px 5px;
+}
+tbody tr:nth-child(even) td, tbody tr.even td {
+  background: #e5ecf9;
+}
+tfoot {
+  font-style: italic;
+}
+caption {
+  background: #eee;
+}
+.small {
+  margin-bottom: 1.875em;
+  line-height: 1.875em;
+}
+.large {
+  font-size: 14.399999999999999px;
+  line-height: 2.5em;
+  margin-bottom: 1.25em;
+}
+html {
+  font-size: 62.5%;
+}
+#wrapper {
+  width: 1020px;
+  margin: 50px auto;
+}

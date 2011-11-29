@@ -7,11 +7,9 @@
  */
 ?>
 
-<section id="main">
-	
-	<div class="inner">
+<section id="content">
 		
-		<section id="content">
+		<section id="main" role="main">
 
 			<div id="post-0" class="post error404 not-found">
 				<h1 class="entry-title">
@@ -25,12 +23,10 @@
 				</div>
 			</div><!-- #post-0 -->
 
-		</section><!-- #content -->
+		</section><!-- #main -->
 		
 		<?php get_sidebar(); //Load the sidebar ?>
-		
-	</div><!-- .inner -->
 	
-</section><!-- #main -->
+</section><!-- #content -->
 
 <?php get_footer(); //Load the footer ?>

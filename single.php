@@ -9,11 +9,9 @@
 
 <?php get_header(); //Load the header ?>
 
-<section id="main">
-	
-	<div class="inner">
+<section id="content">
 		
-		<section id="content">
+		<section id="main" role="main">
 			
 			<?php the_post(); ?>
 			
@@ -69,12 +67,10 @@
 			
 			<?php comments_template('', true); //Load the comments ?>
 
-		</section><!-- #content -->
+		</section><!-- #main -->
 		
 		<?php get_sidebar(); //Load the sidebar ?>
-		
-	</div><!-- .inner -->
 	
-</section><!-- #main -->
+</section><!-- #content -->
 
 <?php get_footer(); //Load the footer ?>

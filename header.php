@@ -46,8 +46,8 @@
 		
 		<div id="wrapper" class="hfeed">
 			
-			<header id="header">
-				<div class="inner">
+			<header id="header" role="banner">
+
 					<div id="blog-title">
 						<span>
 							<a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>" rel="home">
@@ -67,5 +67,5 @@
 					<div class="skip-link">
 						<a href="#content" title="<?php _e('Skip to content', 'inception'); ?>"><?php _e('Skip to content', 'inception'); ?></a>
 					</div>
-				</div><!-- .inner -->
+
 			</header><!-- #header -->

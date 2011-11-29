@@ -9,11 +9,9 @@
 
 <?php get_header(); //Load the header ?>
 
-<section id="main">
-	
-	<div class="inner">
+<section id="content">
 		
-		<section id="content">
+		<section id="main" role="main">
 			
 			<?php //Get the post
 			the_post(); ?>
@@ -112,12 +110,10 @@
 			<?php //End query
 			} ?>
 			
-		</section><!-- #content -->
+		</section><!-- #main -->
 		
 		<?php get_sidebar(); //Load the sidebar ?>
-		
-	</div><!-- .inner -->
 	
-</section><!-- #main -->
+</section><!-- #content -->
 
 <?php get_footer(); //Load the footer ?>

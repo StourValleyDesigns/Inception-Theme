@@ -9,11 +9,9 @@
 
 <?php get_header(); //Load the header ?>
 
-<section id="main">
-	
-	<div class="inner">
+<section id="content">
 		
-		<section id="content">
+		<section id="main" role="main">
 			
 			<?php //Navigation ?>
 			<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if($total_pages > 1) { ?>
@@ -89,12 +87,10 @@
 				</div>
 			<?php } ?>
 			
-		</section><!-- #content -->
+		</section><!-- #main -->
 		
 		<?php get_sidebar(); //Load the sidebar ?>
-		
-	</div><!-- .inner -->
 	
-</section><!-- #main -->
+</section><!-- #content -->
 
 <?php get_footer(); //Load the footer ?>

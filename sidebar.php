@@ -7,7 +7,7 @@
  */
 ?>
 
-<aside id="sidebar">
+<aside id="sidebar" role="complementary">
 	<?php //Check to see if we have active primary widget
 	if(is_sidebar_active('primary_widget_area')) : ?>
 	

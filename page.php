@@ -9,11 +9,9 @@
 
 <?php get_header(); ?>
 
-<section id="main">
-	
-	<div class="inner">
+<section id="content">
 		
-		<section id="content">
+		<section id="main" role="main">
 			
 			<?php //Get the post
 			the_post(); ?>
@@ -29,12 +27,10 @@
 					</div><!-- .entry-content -->
 				</div><!-- #post-<?php the_ID(); ?> -->
 
-		</section><!-- #content -->
+		</section><!-- #main -->
 		
 		<?php get_sidebar(); //Load the sidebar ?>
-		
-	</div><!-- .inner -->
 	
-</section><!-- #main -->
+</section><!-- #content -->
 
 <?php get_footer(); //Load the footer ?>

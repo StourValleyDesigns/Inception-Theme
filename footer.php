@@ -7,7 +7,7 @@
  */
 ?>
 
-			<footer id="footer">
+			<footer id="footer" role="contentinfo">
 				<p>The footer</p>
 			</footer><!-- #footer -->
 

@@ -67,5 +67,9 @@
 					<div class="skip-link">
 						<a href="#content" title="<?php _e('Skip to content', 'inception'); ?>"><?php _e('Skip to content', 'inception'); ?></a>
 					</div>
+					
+					<nav id="access" role="navigation">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+					</nav><!-- #access -->
 
 			</header><!-- #header -->

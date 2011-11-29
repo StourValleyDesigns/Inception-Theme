@@ -7,37 +7,195 @@
  * Author URI: http://stourvalleydesigns.com
  */
 
-@BASEFONT: 12px;
-@BASELINE: @BASEFONT * 1.5;
+//Set up some variables
+@FONTSIZE: 12;
 
-@import "svd-reset.less";
+//Load required frameworks
+@import "svd-reset";
 @import "svd-typography";
 
-html {
-	font-size: 62.5%;
-}
-
-
+/*
+ * Page Structure
+ */
 #wrapper {
-  width: 1020px;
-  margin: 50px auto;
-}
-
-#header {
-}
-
-#blog-title {
-}
-
-#blog-description {
-}
-
-.skip-link {
-
+  width: 960px;
+  margin: 20px auto;
 }
 
 #content {
+	overflow: hidden;
 }
 
+/*
+ * Header
+ */
+#header {
+
+}
+
+#blog-title {
+
+}
+
+#blog-description {
+
+}
+
+/*
+ * Navigation
+ */
+#access {
+	margin: 0 0 1.5em 0;
+	width: 100%;
+	float: left;
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		
+		ul {
+			display: none;
+			float: left;
+			position: absolute;
+			top: 2em;
+			left: 0;
+			z-index: 99999;
+			
+			a {
+				padding: .5em .5em .5em 1em;
+				height: auto;
+			}
+			
+			ul {
+				left: 100%;
+				top: 0;
+			}
+		}
+		
+		li:hover > ul {
+			display: block;
+		}
+	}
+		
+	li {
+		display: inline;
+		float: left;
+		position: relative;
+	}
+	
+	a {
+		display: block;
+		line-height: 2em;
+		padding: 0 1em;
+		text-decoration: none;
+	}
+}
+
+.skip-link {
+	position: absolute;
+	
+}
+
+.navigation {
+	display: block;
+	overflow: hidden;
+}
+
+.nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+.nav-above {
+	
+}
+
+.nav-below {
+	
+}
+
+/*
+ * Main page layout
+ */
 #main {
+	width: 593px;
+	float: left;
+}
+
+/*
+ * Page Styling
+ */
+
+
+/*
+ * Post Styling
+ */
+article {
+	
+}
+
+.entry-header {
+	.entry-meta {
+		
+	}
+}
+
+.entry-content {
+	
+}
+
+.entry-meta {
+	
+}
+
+/*
+ * Sidebar
+ */
+#sidebar {
+	width: 367px;
+	float: right;
+}
+
+/*
+ * Footer
+ */
+#footer {
+	position: relative;
+	clear: both;
+	text-align: center;
+}
+
+/*
+ * Misc Elements
+ */
+.alignleft, img.alignleft {
+	display: inline;
+	float: left;
+}
+
+.alignright, img.alignright {
+	display: inline;
+	float: right;
+}
+
+.aligncenter, img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	text-align: center;
+}
+
+.wp-caption img {
+	
 }

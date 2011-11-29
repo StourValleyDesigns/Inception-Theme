@@ -332,8 +332,9 @@ body {
   font-size: 12px;
   line-height: 18px;
   color: #222;
-  background: #fff;
+  background: #fff url(img/blg.gif) 2px;
   font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  
 }
 h1,
 h2,
@@ -465,10 +466,191 @@ caption {
   line-height: 2.5em;
   margin-bottom: 1.25em;
 }
-html {
-  font-size: 62.5%;
-}
+/*
+ * Page Structure
+ */
 #wrapper {
-  width: 1020px;
-  margin: 50px auto;
+  width: 960px;
+  margin: 20px auto;
+}
+
+#content {
+	
+}
+
+/*
+ * Header
+ */
+#header {
+
+}
+
+#blog-title {
+
+}
+
+#blog-description {
+
+}
+
+/*
+ * Navigation
+ */
+#access {
+	
+}
+
+.skip-link {
+
+}
+
+.navigation {
+	display: block;
+	overflow: hidden;
+}
+
+.nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+.nav-above {
+	
+}
+
+.nav-below {
+	
+}
+
+/*
+ * Main page layout
+ */
+#main {
+	width: 593px;
+	float: left;
+}
+
+/*
+ * Page Styling
+ */
+
+
+/*
+ * Post Styling
+ */
+article {
+	
+}
+
+.entry-header {
+	.entry-meta {
+		
+	}
+}
+
+.entry-content {
+	
+}
+
+.entry-meta {
+	
+}
+
+/*
+ * Sidebar
+ */
+#sidebar {
+	width: 367px
+	float: right;
+}
+
+/*
+ * Footer
+ */
+#footer {
+	position: relative;
+	clear: both;
+	text-align: center;
+}
+
+/*
+ * Misc Elements
+ */
+.alignleft, img.alignleft {
+	display: inline;
+	float: left;
+}
+
+.alignright, img.alignright {
+	display: inline;
+	float: right;
+}
+
+.aligncenter, img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	text-align: center;
+}
+
+.wp-caption img {
+	
+}
+
+#access {
+	margin: 0 0 1.5em 0;
+	width: 100%;
+	float: left;
+}
+	
+#access ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+#access li {
+	display: inline;
+	float: left;
+	position: relative;
+}
+
+#access a {
+	display: block;
+	line-height: 2em;
+	padding: 0 1em;
+	text-decoration: none;
+}
+
+#access ul ul {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	z-index: 99999;
+}
+
+#access ul ul a {
+	padding: .5em .5em .5em 1em;
+	height: auto;
+}
+
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+
+#access ul li:hover > ul {
+	display: block;
 }

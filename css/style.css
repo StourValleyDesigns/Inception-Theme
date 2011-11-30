@@ -1,22 +1,6 @@
 /*
- * Theme Name: Stour Valley Designs
- * Theme URI: http://stourvalleydesigns.com/
- * Description: Custom theme for Stour Valley Designs
- * Version: 1.0
- * Author: Adam Chamberlin
- * Author URL: http://stourvalleydesigns.com.
- * 
+ * Mixins and Variables
  */
-.clearfix {
-  zoom: 1;
-}
-.clearfix:after {
-  display: block;
-  visibility: hidden;
-  height: 0;
-  clear: both;
-  content: ".";
-}
 /*
  * Reset's some browser defaults and adds a touch of styling
  */
@@ -293,11 +277,29 @@ td, td img {
   font-weight: normal;
   vertical-align: top;
 }
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
 body,
 select,
 input,
 textarea {
   color: #333;
+}
+a {
+  color: #03f;
+}
+a:hover {
+  color: #69f;
 }
 ::-moz-selection {
   background: #fcd700;
@@ -386,77 +388,56 @@ p {
   margin-bottom: 1.5em;
   line-height: 1.5em;
 }
-a {
-  text-decoration: none;
-  color: #1e5372;
-  padding: 2px 0;
-  -webkit-transition: color 0.3s ease-out;
-}
-a:hover {
-  color: #74ab4e;
-}
 /*
  * Navigation
  */
 #access {
   margin: 0 0 1.5em 0;
   width: 100%;
-  border: 1px solid red;
+  float: left;
 }
 #access ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  text-align: center;
-  /*ul {
-			float: left;
-			position: absolute;
-			top: 2em;
-			left: 0;
-			z-index: 99999;
-			width: 15em;
-			display: none;
-			
-			a {
-				padding: .5em .2em .5em 2em;
-				height: auto;
-			}
-			
-			ul {
-				left: 100%;
-				top: 0;
-			}
-		}
-		
-		li:hover > ul {
-			display: block;
-		}*/
-
+}
+#access ul ul {
+  float: left;
+  position: absolute;
+  top: 2em;
+  left: 0;
+  z-index: 99999;
+  width: 15em;
+  display: none;
+}
+#access ul ul a {
+  padding: .5em .2em .5em 2em;
+  height: auto;
+}
+#access ul ul ul {
+  left: 100%;
+  top: 0;
+}
+#access ul li:hover > ul {
+  display: block;
 }
 #access li {
   display: inline;
+  float: left;
   position: relative;
 }
 #access a {
-  display: inline-block;
+  display: block;
   line-height: 2em;
   padding: 0 1em;
   text-decoration: none;
-  border: 1px solid green;
 }
 #wrapper {
   width: 95%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 #content {
-  zoom: 1;
-}
-#content:after {
-  display: block;
-  visibility: hidden;
-  height: 0;
   clear: both;
-  content: ".";
 }
 #main {
   background: rgba(200, 54, 54, 0.3);
@@ -465,87 +446,23 @@ a:hover {
   background: rgba(20, 200, 20, 0.3);
 }
 #footer {
-  background: #f1f4f6;
-  overflow: hidden;
-  zoom: 1;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 10px 0;
-  color: #aeb3b6;
+  background: rgba(20, 20, 200, 0.3);
 }
-#footer:after {
-  display: block;
-  visibility: hidden;
-  height: 0;
-  clear: both;
-  content: ".";
-}
-#blog-title,
-#blog-description,
-.skip-link,
-#footer ul {
+#blog-title, #blog-description {
   display: none;
 }
-/* Smartphones landscape */
 @media only screen and (min-width: 480px) {
   
 }
 @media only screen and (min-width: 600px) {
   
 }
-/* iPads (portrait) */
 @media only screen and (min-width: 768px) {
-  #access {
-    overflow: hidden;
-  }
-  #access ul {
-    float: right;
-  }
-  #access ul li a {
-    float: left;
-  }
-  #footer ul {
-    float: left;
-  }
-  #footer ul li {
-    display: inline;
-    border-right: 1px solid #aeb3b6;
-  }
-  #footer ul li a {
-    color: #aeb3b6;
-    text-decoration: none;
-    padding: 0 10px;
-  }
-  #footer ul li:last-child {
-    border: none;
-  }
-  #footer ul li.current_page_item a {
-    color: #82888c;
-  }
-  #footer p {
-    float: right;
-  }
+  
 }
-/* iPads (landscape) */
 @media only screen and (min-width: 992px) {
-  #main {
-    width: 62%;
-    float: left;
-  }
-  #sidebar {
-    width: 38%;
-    float: right;
-  }
+  
 }
-/* Desktops and large screens */
 @media only screen and (min-width: 1382px) {
-  #wrapper {
-    width: 1350px;
-  }
-  #main {
-    width: 838px;
-  }
-  #sidebar {
-    width: 512px;
-  }
+  
 }

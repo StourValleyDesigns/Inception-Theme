@@ -66,7 +66,7 @@ if(have_comments()) : ?>
 	
 		<div id="trackbacks-list" class="comments">
 			<h3>
-				<?php printf($comment_count > 1 ? __('<span>%d</span> Trackbacks', 'inception') : __('<span>One</span> Trackback', 'inception'), $ping_count); ?>
+				<?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'inception') : __('<span>One</span> Trackback', 'inception'), $ping_count); ?>
 			</h3>
 			
 			<ol>

@@ -9,7 +9,7 @@
 
 <aside id="sidebar" role="complementary">
 	<?php //Check to see if we have active primary widget
-	if(is_sidebar_active('primary_widget_area')) : ?>
+	//if(is_sidebar_active('primary_widget_area')) : ?>
 	
 		<div id="primary" class="widget-area">
 			<ul class="xoxo">
@@ -18,7 +18,7 @@
 		</div><!-- #primary -->
 	
 	<?php //End the primary widget if
-	endif; ?>
+	//endif; ?>
 	
 	<?php //Check to see if we have active secondary widget
 	if(is_sidebar_active('secondary_widget_area')) : ?>

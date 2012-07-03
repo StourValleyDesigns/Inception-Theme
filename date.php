@@ -1,6 +1,6 @@
 <?php
 /*
- * The 404 template
+ * The date archive template
  * 
  * @package WordPress
  * @subpackage Inception

@@ -1,6 +1,6 @@
 <?php
 /*
- * The 404 template
+ * The taxonomy archive template
  * 
  * @package WordPress
  * @subpackage Inception

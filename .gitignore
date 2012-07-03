@@ -11,3 +11,6 @@ Desktop.ini
 #App stuff
 .settings
 .project
+
+#SASS stuff
+.sass-cache

@@ -1,8 +1,10 @@
 <?php
 /*
- * The 404 template
+ * The home page template
  * 
  * @package WordPress
  * @subpackage Inception
  */
 ?>
+
+<?php get_header(); ?>

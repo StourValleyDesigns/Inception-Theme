@@ -8,5 +8,72 @@
  * 
  */
 
-// CSS reset
+//
+// Set some variables
+//
+$FONTSIZE : 12;
+$BASEFONT : ($FONTSIZE / 16) * 1em; //
+$BASELINE: $BASEFONT * 2; 
+
+@import "mixins";
+
+/*
+ * CSS reset
+ */
 @import "reset";
+
+/*
+ * Base Styles
+ */
+html {
+  overflow-y: scroll;
+  font-size : 62.5%;
+  -webkit-overflow-scrolling : touch;
+  -webkit-text-size-adjust : 100%;
+  -ms-text-size-adjust : 100%;
+}
+
+body {
+  margin : 0;
+  padding : 0;
+  width : 100%;
+  background-color : transparent;
+  color: #222;
+	font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+	@include font-size($FONTSIZE);
+}
+
+/*
+ * Typography
+ */
+@import "typography";
+
+/*
+ * Printed media
+ */
+@media print {
+  @import "print";
+}
+
+/*
+ * Device media queries
+ */
+@media only screen and  (min-width: 480px) {
+  @import "480";
+}
+
+@media only screen and (min-width: 600px) {
+  @import "600";
+}
+
+@media only screen and (min-width: 768px) {
+  @import "768";
+}
+
+@media only screen and (min-width: 992px) {
+  @import "992";
+}
+
+@media only screen and (min-width: 1382px) {
+  @import "1382";
+}

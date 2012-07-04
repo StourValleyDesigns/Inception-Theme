@@ -1,0 +1,23 @@
+//
+// SCSS mixins
+// 
+// @package WordPress
+// @subpackage Inception
+//
+
+@mixin font-size($FONTSIZE: 16) {
+  font-size : #{$FONTSIZE}px;
+  font-size : #{$FONTSIZE / 10}rem;
+}
+
+// Clearfix
+@mixin clearfix {
+  zoom: 1;
+	&:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    content: ".";
+	}
+}

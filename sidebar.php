@@ -8,3 +8,9 @@
  * 
  */
 ?>
+
+<aside id="sidebar" role="complementary">
+	
+	<h1>The sidebar</h1>
+
+</aside><!-- #sidebar -->

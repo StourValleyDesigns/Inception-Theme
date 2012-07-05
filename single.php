@@ -8,3 +8,23 @@
  * 
  */
 ?>
+
+<?php get_header(); // Load the header ?>
+
+<section id="content">
+
+	<section id="main" role="main">
+
+		<?php while ( have_posts() ) : the_post(); // Start The Loop?>
+
+			<?php get_template_part( 'content', 'single' ); // Load the single post content template ?>
+
+		<?php endwhile; // End The Loop ?>
+
+	</section><!-- #main -->
+
+	<?php get_sidebar(); // Load the sidebar ?>
+
+</section><!-- #content -->
+
+<?php get_footer(); // Load the footer ?>

@@ -8,3 +8,35 @@
  * 
  */
 ?>
+
+<?php get_header(); // Load the header ?>
+
+<section id="content">
+
+	<section id="main" role="main">
+
+		<article id="post-0" class="post error404 not-found">
+
+			<header class="entry-header">
+
+				<h1 class="entry-title">
+					<?php _e('Not Found', 'inception'); ?>
+				</h1>
+			</header><!-- .entry-header -->
+
+			<div class="entry-content">
+				<p>
+					<?php _e('Apologies, but we were unable to find what you were looking for. Perhaps searching will help.', 'inception'); ?>
+				</p>
+				<?php get_search_form(); ?>
+			</div>
+			
+		</article><!-- #post-0 -->
+
+	</section><!-- #main -->
+
+	<?php get_sidebar(); // Load the sidebar ?>
+
+</section><!-- #content -->
+
+<?php get_footer(); // Load the footer ?>

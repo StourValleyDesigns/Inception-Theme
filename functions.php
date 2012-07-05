@@ -2,8 +2,10 @@
 /*
  * The functions file for the theme
  * 
- * @package WordPress
- * @subpackage Inception
+ * @package Inception
+ * @author Adam Chamberlin
+ * @since 1.0
+ * 
  */
 
 /*

@@ -2,7 +2,9 @@
 /*
  * The single page template
  * 
- * @package WordPress
- * @subpackage Inception
+ * @package Inception
+ * @author Adam Chamberlin
+ * @since 1.0
+ * 
  */
 ?>

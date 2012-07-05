@@ -34,7 +34,10 @@
   <link rel="stylesheet" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-  <link rel="shortcut icon" type="image/png" href="<?php echo IMAGES_PATH; ?>/favicon.png">
+  <link rel="shortcut icon" href="<?php echo IMAGES_PATH; ?>/favicon.ico">
+  <link rel="apple-touch-icon" href="<?php echo IMAGES_PATH; ?>/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="<?php echo IMAGES_PATH; ?>/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="<?php echo IMAGES_PATH; ?>/apple-touch-icon-114x114.png">
 
   <!-- IE Fix and hack -->
   <!-- [iflt IE 9]>

@@ -21,8 +21,8 @@
 
 	<div class="entry-content">
 
-		<?php the_content(__('Continue reading <span class="meta-nav">&raquo;</span>', 'inception')); ?>
-		<?php wp_link_pages('before=<div class="page-link">' . __('Pages:', 'inception') . '&after=</div>'); ?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'inception' ) ); ?>
+		<?php wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'inception' ) . '&after=</div>'); ?>
 	
 	</div><!-- .entry-content -->
 

@@ -35,5 +35,4 @@
 
 </section><!-- #content -->
 
-
 <?php get_footer(); // Load the footer ?>

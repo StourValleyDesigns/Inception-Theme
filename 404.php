@@ -20,13 +20,13 @@
 			<header class="entry-header">
 
 				<h1 class="entry-title">
-					<?php _e('Not Found', 'inception'); ?>
+					<?php __( 'Not Found', 'inception' ); ?>
 				</h1>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
 				<p>
-					<?php _e('Apologies, but we were unable to find what you were looking for. Perhaps searching will help.', 'inception'); ?>
+					<?php __( 'Apologies, but we were unable to find what you were looking for. Perhaps searching will help.', 'inception' ); ?>
 				</p>
 				<?php get_search_form(); ?>
 			</div>

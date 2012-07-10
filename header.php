@@ -27,9 +27,9 @@
 		if( is_single() ) { single_post_title(); }
 		elseif( is_home() || is_front_page()) { bloginfo( 'name' ); print ' | '; bloginfo( 'description' ); get_page_number(); }
 		elseif(is_page()) { single_post_title(''); }
-		elseif(is_search()) { bloginfo('name'); print ' | Search results for ' . wp_specialchars($s); get_page_number(); }
-		elseif(is_404()) { bloginfo('name'); print ' | Not Found'; }
-		else { bloginfo('name'); wp_title('|'); get_page_number(); }
+		elseif(is_search()) { bloginfo( 'name' ); print ' | Search results for ' . wp_specialchars($s); get_page_number(); }
+		elseif(is_404()) { bloginfo( 'name' ); print ' | Not Found'; }
+		else { bloginfo( 'name' ); wp_title('|'); get_page_number(); }
 		?></title>
 
 	<!-- Links, favicons and feeds -->
@@ -62,9 +62,9 @@
 		</hgroup>
 
 		<nav id="main-navigation" role="navigation">
-			<h1 class="assistive-text"><?php _e( 'Menu', 'inception' ); ?></h1>
+			<h1 class="assistive-text"><?php __( 'Menu', 'inception' ); ?></h1>
 			<div class="skip-link">
-				<a href="#content" title="<?php _e('Skip to content', 'inception'); ?>"><?php _e('Skip to content', 'inception'); ?></a>
+				<a href="#content" title="<?php __( 'Skip to content', 'inception' ); ?>"><?php __( 'Skip to content', 'inception' ); ?></a>
 			</div>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #access -->

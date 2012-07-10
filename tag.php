@@ -20,7 +20,7 @@
 			<header class="page-header">
 
 				<h1 class="page-title">
-					<?php _e( 'Archives', 'inception' ); ?>
+					<?php printf( __( 'Tag Archives: %s', '_s' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?>
 				</h1><!-- .page-title -->
 
 			</header><!-- .page-header -->
@@ -42,6 +42,5 @@
 	<?php get_sidebar(); // Load the sidebar ?>
 
 </section><!-- #content -->
-
 
 <?php get_footer(); // Load the footer ?>

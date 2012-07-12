@@ -49,6 +49,25 @@ body {
 @import "typography";
 
 /*
+ * WordPress Styling
+ */
+
+#wrapper {
+  margin: 0 0.5em;
+}
+
+#masthead {
+  
+  h2:after {
+    content: " 320 wide layout";
+  }
+}
+
+#content {
+  clear: both;
+}
+
+/*
  * Printed media
  */
 @media print {

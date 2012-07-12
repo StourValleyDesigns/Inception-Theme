@@ -4,3 +4,31 @@
 // @package WordPress
 // @subpackage Inception
 //
+
+#wrapper {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+#masthead {
+  
+  h1 {
+    
+  }
+  
+  h2:after {
+    content: " Desktop layout";
+  }
+  
+  #main-navigation {
+    
+  }
+}
+
+#content {
+  
+}
+
+#main-footer {
+  
+}

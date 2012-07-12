@@ -9,7 +9,7 @@
  */
 ?>
 
-	<footer id="" role="contentinfo">
+	<footer id="main-footer" role="contentinfo">
 		<p>This is the footer</p>
 	</footer><!-- # -->
 

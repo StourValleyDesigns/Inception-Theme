@@ -4,3 +4,14 @@
 // @package WordPress
 // @subpackage Inception
 //
+
+#wrapper {
+  margin: 0 10px;
+}
+
+#masthead {
+  
+  h2:after {
+    content: " Portrait tablet layout";
+  }
+} 

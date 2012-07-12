@@ -175,8 +175,76 @@ caption {
   margin-bottom: 1.5em; }
 
 /*
+ * WordPress Styling
+ */
+#wrapper {
+  margin: 0 0.5em; }
+
+#masthead h2:after {
+  content: " 320 wide layout"; }
+
+#content {
+  clear: both; }
+
+/*
  * Printed media
  */
 /*
  * Device media queries
  */
+@media only screen and  (min-width: 480px) {
+  #wrapper {
+    margin: 0 5px; }
+
+  #masthead h2:after {
+    content: " Portrait mobile layout"; } }
+@media only screen and (min-width: 600px) {
+  #wrapper {
+    margin: 0 10px; }
+
+  #masthead h2:after {
+    content: " Landscape mobile layout"; } }
+@media only screen and (min-width: 768px) {
+  #wrapper {
+    margin: 0 10px; }
+
+  #masthead h2:after {
+    content: " Portrait tablet layout"; } }
+@media only screen and (min-width: 992px) {
+  #wrapper {
+    width: 960px;
+    margin: 0 auto; }
+
+  #masthead h2:after {
+    content: " Landscape tablet layout"; }
+  #masthead #main-navigation {
+    display: block; }
+    #masthead #main-navigation ul {
+      list-style: none; }
+      #masthead #main-navigation ul li {
+        float: left;
+        position: relative; }
+        #masthead #main-navigation ul li a {
+          display: block;
+          text-decoration: none;
+          padding: 10px; }
+      #masthead #main-navigation ul ul {
+        display: none;
+        top: 5em;
+        left: 0;
+        padding: 0;
+        float: left;
+        z-index: 9999;
+        position: absolute;
+        top: 2em; }
+        #masthead #main-navigation ul ul a {
+          width: 100%; }
+      #masthead #main-navigation ul li:hover > ul {
+        display: block; } }
+@media only screen and (min-width: 1382px) {
+  #wrapper {
+    width: 1300px;
+    margin: 0 auto; }
+
+  #masthead h2:after {
+    content: " Desktop layout"; } }

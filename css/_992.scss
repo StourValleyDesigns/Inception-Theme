@@ -4,3 +4,62 @@
 // @package WordPress
 // @subpackage Inception
 //
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#masthead {
+  
+  h2:after {
+    content: " Landscape tablet layout";
+  }
+  
+  #main-navigation {
+    display: block;
+    
+    ul {
+      list-style: none;
+      
+      li {
+        float: left;
+        position: relative;
+        
+        a {
+          display: block;
+          text-decoration: none;
+          padding: 10px;
+        }
+      }
+      
+      ul {
+        display: none;
+        top: 5em;
+        left: 0;
+        padding: 0;
+        float: left;
+        z-index: 9999;
+        position: absolute;
+        top: 2em;
+        
+        a {
+          width: 100%;
+        }
+
+      }
+      
+      li:hover > ul {
+        display: block;
+      }
+    }
+  }
+}
+
+#content {
+  
+}
+
+#main-footer {
+  
+}
